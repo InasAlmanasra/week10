@@ -16,17 +16,6 @@ function startDataUpload() {
 	
 	var postString = postString + "question="+question +"&optA="+optA+"&optB="+optB+"&optC="+optC+"&optD="+optD+"&optE="+optE+"&correct="+correct;
 	
-		// now get the checkbox values - separate them with a | so that they can be // split later on if necessary
-	var checkString = "";
-	for (var i = 1;i< 9;i++){
-		if (document.getElementById("check"+i).checked === true) {
-			checkString = checkString + document.getElementById("check"+i).value + "||"
-		}
-
-	}
-
-	postString = postString + "&modulelist="+checkString;
-
 	
 	processData(postString);
 
