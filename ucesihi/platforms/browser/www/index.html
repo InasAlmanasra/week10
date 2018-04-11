@@ -1,0 +1,39 @@
+<!doctype html>
+<head>
+<title>Simple Form Creation Example</title>
+</head>
+<body>
+<h1> This is a simple form</h1>
+
+<div>
+
+
+<div id="dataUploadResult">Please enter the coordinates of the point</div>
+<br />
+<br />
+<label for="latitude">Latitude</label><input type="text" size="25" id="latitude"/><br />
+<br />
+<br />
+<label for="longitude">Longitude</label><input type="text" size="25" id="longitude"/><br />
+
+<br />
+<br />
+
+<label for="question">What is the question for this point</label><input type="text" size="25" id="question"/><br />
+<label for="optA">Answer option A</label><input type="text" size="25" id="optA"/><br />
+<label for="optB">Answer option B</label><input type="text" size="25" id="optB"/><br />
+<label for="optC">Answer option C</label><input type="text" size="25" id="optC"/><br />
+<label for="optD">Answer option D</label><input type="text" size="25" id="optD"/><br />
+<label for="optE">Answer option E</label><input type="text" size="25" id="optE"/><br />
+<label for="correct">Correct Answer</label><input type="text" size="25" id="correct"/><br />
+
+<p>Click here to upload the data</p>
+<button id="startUpload" onclick="startDataUpload()">Start Data Upload</button>
+<br />
+
+</div>
+
+<script src="./js/uploadData.js"> </script>
+
+
+</body>
