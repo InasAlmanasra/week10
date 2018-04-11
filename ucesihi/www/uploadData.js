@@ -4,7 +4,7 @@ function startDataUpload() {
 	// now get the geometry values
 	var latitude = document.getElementById("latitude").value;
 	var longitude = document.getElementById("longitude").value;
-	postString =  "&latitude=" + latitude + "&longitude=" + longitude;
+	var postString =  "&latitude=" + latitude + "&longitude=" + longitude;
 	
 	var question = document.getElementById("question").value;
 	var optA = document.getElementById("optA").value;
@@ -14,7 +14,7 @@ function startDataUpload() {
 	var optE = document.getElementById("optE").value;
 	var correct = document.getElementById("correct").value;
 	
-	var postString = postString + "question="+question +"&optA="+optA+"&optB="+optB+"&optC="+optC+"&optD="+optD+"&optE="+optE+"&correct="+correct;
+	postString = postString + "question="+question +"&optA="+optA+"&optB="+optB+"&optC="+optC+"&optD="+optD+"&optE="+optE+"&correct="+correct;
 	
 	
 	processData(postString);
