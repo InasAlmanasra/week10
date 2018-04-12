@@ -20,8 +20,8 @@ function startDataUpload() {
 	postString = postString + "&latitude=" + latitude + "&longitude=" + longitude;
 
    alert( latitude+ "  "+longitude);
-	
 	processData(postString);
+	alert(postString)
 
 }
 

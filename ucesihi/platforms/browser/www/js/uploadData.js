@@ -9,7 +9,7 @@ function startDataUpload() {
 	var opte = document.getElementById("opte").value;
 	var correct = document.getElementById("correct").value;
 
-	//alert(question + " "+ opta + " "+module);
+	alert(question + " "+ opta + " "+optb + "  " +optc+"  "+optd+"   "+opte+"   ");
 	
 	var postString = "question="+question +"&opta="+opta+"&optb="+optb+"&optc="+optc+"&optd="+optd+"&opte="+opte+"&correct="+correct;
 	
@@ -19,9 +19,9 @@ function startDataUpload() {
 	var longitude = document.getElementById("longitude").value;
 	postString = postString + "&latitude=" + latitude + "&longitude=" + longitude;
 
-
-	
+   alert( latitude+ "  "+longitude);
 	processData(postString);
+	alert(postString)
 
 }
 
