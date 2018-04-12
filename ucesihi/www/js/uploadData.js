@@ -11,7 +11,7 @@ function startDataUpload() {
 	
 		// now get the checkbox values - separate them with a | so that they can be // split later on if necessary
 	var checkString = "";
-	for (var i = 1;i< 9;i++){
+	for (var i = 1;i< 5;i++){
 		if (document.getElementById("check"+i).checked === true) {
 			checkString = checkString + document.getElementById("check"+i).value + "||"
 		}
