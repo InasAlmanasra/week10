@@ -22,7 +22,7 @@ app.post('/uploadData',function(req,res){
 	// note that we are using POST here as we are uploading data
 	// so the parameters form part of the BODY of the request rather than the RESTful API
 	console.dir(req.body);
-
+    res.send(req.body);
  	pool.connect(function(err,client,done) {
        	if(err){
           	console.log("not able to get connection "+ err);
@@ -33,8 +33,8 @@ app.post('/uploadData',function(req,res){
 // well known text should look like: 'POINT(-71.064544 42.28787)'
 var geometrystring = "st_geomfromtext('POINT(" + req.body.longitude + " " + req.body.latitude + ")'";
 
-var querystring = "INSERT into formquiz (geom,question,optA,optB,optC,optD,optE,correct) values ('";
-querystring = querystring + geometrystring + "))"+req.body.question + "','" +req.body.optA + "','" +req.body.optB + "','" +req.body.optC + "','" +req.body.optD + "','" +req.body.optE + "','" +req.body.correct + "','" ;
+var querystring = "INSERT into formquiz (geom,question,opta,optb,optc,optd,opte,correct) values ('";
+querystring = querystring + geometrystring + "))"+req.body.question + "','" +req.body.opta + "','" +req.body.optb + "','" +req.body.optc + "','" +req.body.optd + "','" +req.body.opte + "','" +req.body.correct + "','" ;
        	console.log(querystring);
        	client.query( querystring,function(err,result) {
           done(); 
