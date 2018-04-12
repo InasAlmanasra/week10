@@ -29,13 +29,6 @@ function startDataUpload() {
 	postString = postString + "&modulelist="+checkString;
 
 
-// now get the radio button values
-	if (document.getElementById("morning").checked) {
- 		 postString=postString+"&lecturetime=morning";
-	}
-	if (document.getElementById("afternoon").checked) {
- 		 postString=postString+"&lecturetime=afternoon";
-	}
 
 	
 	processData(postString);
