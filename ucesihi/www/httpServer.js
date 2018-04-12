@@ -4,7 +4,6 @@ var path = require("path");
 var app = express();
 	var fs = require('fs');
 var bodyParser = require('body-parser');
-var client;
 
 app.use(bodyParser.urlencoded({
   extended: true
@@ -34,9 +33,9 @@ app.post('/uploadData',function(req,res){
 // well known text should look like: 'POINT(-71.064544 42.28787)'
 var geometrystring = "st_geomfromtext('POINT(" + req.body.longitude + " " + req.body.latitude + ")'";
 
-var querystring = "INSERT into formquiz (question,opta,optb,optc, optd, opte, correct, geom) values ('";
-querystring = querystring + req.body.question + "','" + req.body.opta + "','" + req.body.optb + "','" + req.body.optc + "','" + req.body.optd + "','"+ req.body.opte + "','"+ req.body.correct + "','" ;
-querystring = querystring +geometrystring + "))";
+var querystring = "INSERT into formdata (name,surname,module,language, modulelist, lecturetime, geom) values ('";
+querystring = querystring + req.body.name + "','" + req.body.surname + "','" + req.body.module + "','";
+querystring = querystring + req.body.language + "','" + req.body.modulelist + "','" + req.body.lecturetime+"',"+geometrystring + "))";
        	console.log(querystring);
        	client.query( querystring,function(err,result) {
           done(); 
