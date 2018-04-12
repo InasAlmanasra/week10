@@ -7,11 +7,11 @@ function startDataUpload() {
 	var postString =  "latitude=" + latitude + "&longitude=" + longitude;
 	
 	var question = document.getElementById("question").value;
-	var optA = document.getElementById("opta").value;
-	var optB = document.getElementById("optb").value;
-	var optC = document.getElementById("optc").value;
-	var optD = document.getElementById("optd").value;
-	var optE = document.getElementById("opte").value;
+	var opta = document.getElementById("opta").value;
+	var optb = document.getElementById("optb").value;
+	var optc = document.getElementById("optc").value;
+	var optd = document.getElementById("optd").value;
+	var opte = document.getElementById("opte").value;
 	var correct = document.getElementById("correct").value;
 	
 	postString = postString + "&question="+question +"&opta="+opta+"&optb="+optb+"&optc="+optc+"&optd="+optd+"&opte="+opte+"&correct="+correct;
