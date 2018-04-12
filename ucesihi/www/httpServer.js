@@ -34,7 +34,8 @@ app.post('/uploadData',function(req,res){
 var geometrystring = "st_geomfromtext('POINT(" + req.body.longitude + " " + req.body.latitude + ")'";
 
 var querystring = "INSERT into formquiz (geom,question,opta,optb,optc,optd,opte,correct) values ('";
-querystring = querystring + geometrystring + "))"+req.body.question + "','" +req.body.opta + "','" +req.body.optb + "','" +req.body.optc + "','" +req.body.optd + "','" +req.body.opte + "','" +req.body.correct + "','" ;
+querystring = querystring + geometrystring + "))";
+querystring = querystring +req.body.question + "','" +req.body.opta + "','" +req.body.optb + "','" +req.body.optc + "','" +req.body.optd + "','" +req.body.opte + "','" +req.body.correct + "','" ;
        	console.log(querystring);
        	client.query( querystring,function(err,result) {
           done(); 
