@@ -4,6 +4,7 @@ var path = require("path");
 var app = express();
 	var fs = require('fs');
 var bodyParser = require('body-parser');
+var client;
 
 app.use(bodyParser.urlencoded({
   extended: true
