@@ -29,7 +29,7 @@
 	var httpsServer = https.createServer(credentials, app);
 	httpsServer.listen(4443);
 
-
+res.send(req.body);
 
 	// serve static files - e.g. html, css
 	app.use(express.static(__dirname ));
